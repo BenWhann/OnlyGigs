@@ -1,15 +1,21 @@
 [
     {
       "user_firstName": "Brady",
-      "user_lastName": "Lange"
+      "user_lastName": "Lange",
+      "password": "password1234",
+      "email": "email1@email.com"
     },
     {
       "user_firstName": "Ben",
-      "user_lastName": "Whann"
+      "user_lastName": "Whann",
+      "password": "password1234",
+      "email": "email2@email.com"
     },
     {
       "user_firstName": "Rylee",
-      "user_lastName": "Peterson"
+      "user_lastName": "Peterson",
+      "password": "password1234",
+      "email": "email3@email.com"
     }
 ]
   
