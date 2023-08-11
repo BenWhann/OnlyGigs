@@ -1,0 +1,39 @@
+[
+    {
+      "band_name": "Stage Revolution",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email1@email.com"
+    },
+    {
+      "band_name": "Ecstasy",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email2@email.com"
+    },
+    {
+      "band_name": "Afternoon Daydream",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email3@email.com"
+    },
+    {
+      "band_name": "Elaborate Constellations",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email4@email.com"
+    },
+    {
+      "band_name": "Double Helix",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email5@email.com"
+    },
+    {
+      "band_name": "Zombie Hoax",
+      "band_description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email6@email.com"
+    }
+]
+  
