@@ -18,9 +18,7 @@
 //   res.render("homepage");
 // });
 
-// app.get("/login", (req, res) => {
-//   res.render("login");
-// })
+
 
 // app.listen(3001, () => {
 //   console.log("Listening on port 3001");
@@ -57,6 +55,8 @@ const sess = {
   })
 };
 
+
+
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
@@ -68,6 +68,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
