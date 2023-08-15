@@ -20,25 +20,22 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get('/dashboard',  withAuth, async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const bandData = await Band.findByPk(req.session.band_id, {
-      attributes: { exclude: ['password'] },
+      attributes: { exclude: ["password"] },
       include: [{ model: Gig }],
     });
 
     const band = bandData.get({ plain: true });
 
-
-    res.render('dashboard', {
+    res.render("dashboard", {
       ...band,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;
