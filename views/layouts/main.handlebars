@@ -6,7 +6,22 @@
     <title>OnlyGigs</title>
 </head>
 <body>
+    <nav>
+        <nav id="nav-bar">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#unless logged_in}}
+          <a href="/login">Login</a>
+        {{else}}
+          <a href="#" id="logout">Logout</a>
+        {{/unless}}
+      </nav>
+    </nav>
     <h1>OnlyGigs</h1>
     {{{body}}}
+    {{#if logged_in}}
+      <p>logged in</p>
+      <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
