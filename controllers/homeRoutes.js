@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { Band, Gig, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -20,8 +20,23 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+router.get('/dashboard',  withAuth, async (req, res) => {
+  try {
+    const bandData = await Band.findByPk(req.session.band_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Gig }],
+    });
+
+    const band = bandData.get({ plain: true });
+
+
+    res.render('dashboard', {
+      ...band,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 

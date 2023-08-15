@@ -1,0 +1,50 @@
+<div class="">
+    <div class="">
+        <h2>Hello {{band_name}}, welcome to your dashboard.</h2>
+    </div>
+</div>
+
+<div class="">
+    <div class="">
+        <h3>Post a new gig:</h3>
+
+        <form class="form" id="new-post-form">
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input class="form-input" type="text" id="gig-location" name="location" />
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input class="form-input" type="text" id="gig-date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input class="form-input" type="text" id="gig-time" name="time">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create Gig</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6" id="post-list">
+        <h3>{{band_name}}'s Gigs:</h3>
+
+        {{#each gigs as |gig|}}
+        <div class="row mb-2 my-post">
+            <div class="col-md-8">
+                <h4>
+                    <a href="/post/{{gig.id}}">{{location}}</a>
+                    <p>{{date}}</p>
+                    <p>{{time}}</p>
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger" data-id="{{gig.id}}">DELETE POST</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src="./js/dashboard.js"></script>
