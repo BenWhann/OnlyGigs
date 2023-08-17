@@ -27,10 +27,10 @@ Gig.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    band_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "band",
+        model: "user",
         key: "id",
       },
     },

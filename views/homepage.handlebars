@@ -1,7 +1,9 @@
+{{log gigs}}
+{{log check_user}}
 
 {{#each gigs as |gig| }}
 <h2>
-  <a href="/dashboard/{{gig.id}}">{{gig.band.band_name}}</a>  
+  <a href="/dashboard/{{gig.id}}">{{gig.user.username}}</a>  
 </h2>
 <p>
     Location: {{gig.location}}
@@ -9,5 +11,3 @@
 <p>Date: {{gig.date}}</p>
 <p>Time: {{gig.time}}</p>
 {{/each}}
-
-{{log gigs}}

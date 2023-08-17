@@ -1,21 +1,43 @@
 [
     {
-      "user_firstName": "Brady",
-      "user_lastName": "Lange",
+      "id": "1",
+      "username": "Brady",
+      "description": "",
       "password": "password1234",
-      "email": "email1@email.com"
+      "email": "email1@email.com",
+      "is_band": "false"
     },
     {
-      "user_firstName": "Ben",
-      "user_lastName": "Whann",
+      "id": "2",
+      "username": "Afternoon Daydream",
+      "description": "Lorum Ipsum",
       "password": "password1234",
-      "email": "email2@email.com"
+      "email": "email2@email.com",
+      "is_band": "true"
     },
     {
-      "user_firstName": "Rylee",
-      "user_lastName": "Peterson",
+      "id": "3",
+      "username": "Stage Revolution",
+      "description": "Lorum Ipsum",
       "password": "password1234",
-      "email": "email3@email.com"
+      "email": "email3@email.com",
+      "is_band": "true"
+    },
+    {
+      "id": "4",
+      "username": "Ben",
+      "description": "",
+      "password": "password1234",
+      "email": "email4@email.com",
+      "is_band": "false"
+    },
+    {
+      "id": "5",
+      "username": "Rylee",
+      "description": "",
+      "password": "password1234",
+      "email": "email5@email.com",
+      "is_band": "false"
     }
 ]
   
