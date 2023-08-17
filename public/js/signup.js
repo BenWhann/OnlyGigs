@@ -2,16 +2,17 @@ const signupFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the signup form
-  const band_name = document.querySelector("#band-signup").value.trim();
-  const band_description = document.querySelector('#band-desc').value.trim();
+  const username = document.querySelector("#username").value.trim();
+  const description = document.querySelector('#band-desc').value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
+  const is_band = document.querySelector("#is-band").value.trim();
 
-  if (band_name && band_description && email && password) {
+  if (username && email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/bands/signup", {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
-      body: JSON.stringify({ band_name, band_description, email, password }),
+      body: JSON.stringify({ username, description, email, password, is_band }),
       headers: { "Content-Type": "application/json" },
     });
 

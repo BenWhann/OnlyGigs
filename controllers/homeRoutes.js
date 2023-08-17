@@ -1,22 +1,29 @@
 const router = require("express").Router();
-const { User, Gig, Band } = require("../models");
+const { User, Gig } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    if (req.session.logged_in){
+      const is_band = await User.findByPk(req.session.user_id, {
+        attributes: ["is_band"],
+      });
+      var check_user = is_band.get({ plain: true });
+    }
     const gigData = await Gig.findAll({
       include: [
         {
-          model: Band,
-          attributes: ["band_name"],
+          model: User,
+          attributes: ["username"],
         },
       ],
     });
     // Serialize data so the template can read it
     const gigs = gigData.map((gig) => gig.get({ plain: true }));
+    
     // Pass serialized data and session flag into template
     res.render("homepage", {
+      check_user,
       gigs,
       logged_in: req.session.logged_in,
     });
@@ -39,15 +46,20 @@ router.get("/signup", (req, res) => {
 
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const bandData = await Band.findByPk(req.session.band_id, {
+    const is_band = await User.findByPk(req.session.user_id, {
+      attributes: ["is_band"],
+    });
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Gig }],
     });
 
-    const band = bandData.get({ plain: true });
+    const user = userData.get({ plain: true });
+    const check_user = is_band.get({ plain: true });
 
     res.render("dashboard", {
-      ...band,
+      check_user,
+      ...user,
       logged_in: true,
     });
   } catch (err) {
@@ -57,13 +69,13 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
 router.get("/dashboard/:id", withAuth, async (req, res) => {
   try {
-    const bandData = await Band.findByPk(req.params.id, {
+    const userData = await User.findByPk(req.params.id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Gig }],
     });
-    const band = bandData.get({ plain: true });
+    const user = userData.get({ plain: true });
     res.render("dashboard", {
-      ...band,
+      ...user,
       logged_in: true,
     });
   } catch (err) {

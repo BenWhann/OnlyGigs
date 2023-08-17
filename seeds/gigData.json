@@ -3,37 +3,13 @@
       "location": "McDonalds",
       "date": "8/11/2023",
       "time": "5:00",
-      "band_id": "1"
+      "user_id": "2"
     },
     {
       "location": "McDonalds",
       "date": "8/12/2023",
       "time": "5:00",
-      "band_id": "2"
-    },
-    {
-      "location": "McDonalds",
-      "date": "8/13/2023",
-      "time": "5:00",
-      "band_id": "3"
-    },
-    {
-      "location": "McDonalds",
-      "date": "8/14/2023",
-      "time": "5:00",
-      "band_id": "4"
-    },
-    {
-      "location": "McDonalds",
-      "date": "8/15/2023",
-      "time": "5:00",
-      "band_id": "5"
-    },
-    {
-      "location": "McDonalds",
-      "date": "8/16/2023",
-      "time": "5:00",
-      "band_id": "6"
+      "user_id": "3"
     }
 ]
   

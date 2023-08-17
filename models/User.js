@@ -16,13 +16,12 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_firstName: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_lastName: {
+    description: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
@@ -38,6 +37,10 @@ User.init(
       validate: {
         isEmail: true,
       },
+    },
+    is_band: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     },
   },
   {

@@ -17,7 +17,9 @@
     <nav>
       <nav id="nav-bar">
         <a href="/">Home</a>
+        {{#if check_user.is_band}}
         <a href="/dashboard">Dashboard</a>
+        {{/if}}
         {{#unless logged_in}}
           <a href="/login">Login</a>
         {{else}}

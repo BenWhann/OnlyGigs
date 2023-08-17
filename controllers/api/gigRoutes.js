@@ -6,7 +6,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newGig = await Gig.create({
       ...req.body,
-      band_id: req.session.band_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newGig);
@@ -20,7 +20,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const gigData = await Gig.destroy({
       where: {
         id: req.params.id,
-        band_id: req.session.band_id,
+        user_id: req.session.user_id,
       },
     });
 

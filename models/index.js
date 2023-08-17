@@ -1,14 +1,13 @@
 const User = require('./user');
-const Band = require('./band');
 const Gig = require('./Gig');
 
-Band.hasMany(Gig, {
-  foreignKey: 'band_id',
+User.hasMany(Gig, {
+  foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Gig.belongsTo(Band, {
-  foreignKey: 'band_id'
+Gig.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
-module.exports = { User, Band, Gig };
+module.exports = { User, Gig };
