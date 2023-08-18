@@ -25,18 +25,34 @@
     },
     {
       "id": "4",
-      "username": "Ben",
-      "description": "",
+      "username": "Ecstasy",
+      "description": "Lorum Ipsum",
       "password": "password1234",
       "email": "email4@email.com",
-      "is_band": "false"
+      "is_band": "true"
     },
     {
       "id": "5",
+      "username": "Elaborate Constellations",
+      "description": "Lorum Ipsum",
+      "password": "password1234",
+      "email": "email5@email.com",
+      "is_band": "true"
+    },
+    {
+      "id": "6",
+      "username": "Ben",
+      "description": "",
+      "password": "password1234",
+      "email": "email6@email.com",
+      "is_band": "false"
+    },
+    {
+      "id": "7",
       "username": "Rylee",
       "description": "",
       "password": "password1234",
-      "email": "email5@email.com",
+      "email": "email7@email.com",
       "is_band": "false"
     }
 ]
