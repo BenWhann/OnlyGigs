@@ -1,0 +1,17 @@
+  <div class="col-md-6" id="post-list">
+    <h3>{{username}}'s Gigs:</h3>
+    {{#each gigs as |gig|}}
+      <div class="row mb-2 my-post">
+        <div class="col-md-8">
+          <h4>
+            <p>Location: {{location}}</p>
+            <p>Date: {{date}}</p>
+            <p>Time: {{time}}</p>
+          </h4>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="../../js/dashboard.js"></script>

@@ -1,3 +1,6 @@
+{{log check_user}}
+{{log gigs}}
+
 <div class="">
   <div class="">
     <h2>Hello {{username}}, welcome to your dashboard.</h2>
@@ -41,7 +44,6 @@
 
   <div class="col-md-6" id="post-list">
     <h3>{{username}}'s Gigs:</h3>
-
     {{#each gigs as |gig|}}
       <div class="row mb-2 my-post">
         <div class="col-md-8">
@@ -51,9 +53,11 @@
             <p>Time: {{time}}</p>
           </h4>
         </div>
+        {{#if ../check_user.is_band}}
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{gig.id}}">DELETE POST</button>
         </div>
+        {{/if}}
       </div>
     {{/each}}
   </div>
