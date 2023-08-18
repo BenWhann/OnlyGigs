@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OnlyGigs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link
       rel="stylesheet"
       href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
@@ -13,21 +14,24 @@
       $( function() { $( "#gig-date" ).datepicker(); } );
     </script>
   </head>
-  <body>
-    <nav>
-      <nav id="nav-bar">
-        <a href="/">Home</a>
+  <body class="has-background-grey-light">
+    <nav class="navbar has-background-grey-light">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">Home</a>
         {{#if check_user.is_band}}
-        <a href="/dashboard">Dashboard</a>
+        <a class="navbar-item" href="/dashboard">Dashboard</a>
         {{/if}}
         {{#unless logged_in}}
-          <a href="/login">Login</a>
+          <a class="navbar-item" href="/login">Login</a>
         {{else}}
-          <a href="#" id="logout">Logout</a>
+          <a class="navbar-item" href="#" id="logout">Logout</a>
         {{/unless}}
-      </nav>
-    </nav>
-    <h1>OnlyGigs</h1>
+      </div>
+    <div class="navbar-item has-text-centered">
+      <h1 class="title is-">OnlyGigs</h1>
+    </div>
+        </nav>
+
     {{{body}}}
     {{#if logged_in}}
       <p>logged in</p>
