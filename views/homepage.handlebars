@@ -1,13 +1,34 @@
 {{log gigs}}
 {{log check_user}}
 
-{{#each gigs as |gig| }}
-<h2>
-  <a href="/dashboard/{{gig.user_id}}">{{gig.user.username}}</a>  
-</h2>
-<p>
-    Location: {{gig.location}}
-</p>
-<p>Date: {{gig.date}}</p>
-<p>Time: {{gig.time}}</p>
-{{/each}}
+  <div class="columns is-centered is-flex-direction-column">
+    {{!-- <div class="column is-half"> --}}
+        {{#each gigs as |gig| }}
+        <div class="container mt-3 notification is-primary has-text-centered has-background-danger-dark">
+                      
+          <h2>
+              <a href="/dashboard/{{gig.user_id}}">{{gig.user.username}}</a>
+            </h2>
+            <p>
+              Location: {{gig.location}}
+            </p>
+            <p>Date: {{gig.date}}</p>
+            <p>Time: {{gig.time}}</p>
+        </div>
+    {{!-- </div> --}}
+              {{/each}}
+
+  </div>
+
+  {{{body}}}
+  {{#if logged_in}}
+    <p>logged in</p>
+    <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+</html>
+
+
+
+
+
