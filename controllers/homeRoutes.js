@@ -73,7 +73,13 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
       const is_band = await User.findByPk(req.session.user_id, {
         attributes: ["is_band"],
       });
+
+      const band_desc = await User.findByPk(req.session.user_id, {
+        attributes: ["description"]
+      });
+
       var check_user = is_band.get({ plain: true });
+      var description = band_desc.get({ plain: true });
     }
     const userData = await User.findByPk(req.params.id, {
       attributes: { exclude: ["password"] },
@@ -82,6 +88,7 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     res.render("viewdashboard", {
       ...user,
+      description,
       check_user,
       logged_in: true,
     });

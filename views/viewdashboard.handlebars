@@ -1,4 +1,11 @@
+
+  {{log description}}
+  
   <div class="col-md-6" id="post-list">
+    <div>
+        <h2>A bit about {{username}}</h2>
+        <p>{{description.description}}</p>
+    </div>
     <h3>{{username}}'s Gigs:</h3>
     {{#each gigs as |gig|}}
       <div class="row mb-2 my-post">
