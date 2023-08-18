@@ -1,15 +1,51 @@
 [
     {
-      "location": "McDonalds",
-      "date": "8/11/2023",
+      "location": "Waffle House",
+      "date": "8/12/2023",
       "time": "5:00",
       "user_id": "2"
     },
     {
-      "location": "McDonalds",
-      "date": "8/12/2023",
+      "location": "In&Out",
+      "date": "8/14/2023",
+      "time": "5:00",
+      "user_id": "2"
+    },
+    {
+      "location": "Arbys",
+      "date": "8/17/2023",
       "time": "5:00",
       "user_id": "3"
+    },
+    {
+      "location": "Toronto",
+      "date": "8/23/2023",
+      "time": "5:00",
+      "user_id": "3"
+    },
+    {
+      "location": "MSG",
+      "date": "9/23/2023",
+      "time": "5:00",
+      "user_id": "4"
+    },
+    {
+      "location": "Bdubs",
+      "date": "10/04/2023",
+      "time": "5:00",
+      "user_id": "4"
+    },
+    {
+      "location": "DQ",
+      "date": "11/11/2023",
+      "time": "5:00",
+      "user_id": "5"
+    },
+    {
+      "location": "MOA",
+      "date": "12/25/2023",
+      "time": "5:00",
+      "user_id": "5"
     }
 ]
   
