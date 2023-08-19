@@ -74,7 +74,7 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
         attributes: ["is_band"],
       });
 
-      const band_desc = await User.findByPk(req.session.user_id, {
+      const band_desc = await User.findByPk(req.params.id, {
         attributes: ["description"]
       });
 

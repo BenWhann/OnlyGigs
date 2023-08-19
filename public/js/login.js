@@ -2,7 +2,7 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  
+
   const email = document.querySelector("#email-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
@@ -15,8 +15,8 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      
-      document.location.replace("/");
+      document.location.replace("/")
+      location.reload
     } else {
       alert(response.statusText);
     }
@@ -24,5 +24,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
