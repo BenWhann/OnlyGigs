@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OnlyGigs</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link
       rel="stylesheet"
       href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
@@ -14,21 +15,21 @@
       $( function() { $( "#gig-date" ).datepicker(); } );
     </script>
   </head>
-  <body class="has-background-grey-light">
-    <nav class="navbar has-background-grey-light">
+  <body class="body">
+    <nav class="navbar ">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">Home</a>
+        <a class="navbar-item is-size-4 has-text-weight-semibold" href="/">Home</a>
         {{#if check_user.is_band}}
-        <a class="navbar-item" href="/dashboard">Dashboard</a>
+        <a class="navbar-item is-size-4 has-text-weight-semibold" href="/dashboard">Dashboard</a>
         {{/if}}
         {{#unless logged_in}}
-          <a class="navbar-item" href="/login">Login</a>
+          <a class="navbar-item is-size-4 has-text-weight-semibold" href="/login">Login</a>
         {{else}}
-          <a class="navbar-item" href="#" id="logout">Logout</a>
+          <a class="navbar-item is-size-4 has-text-weight-semibold" href="#" id="logout">Logout</a>
         {{/unless}}
       </div>
     <div class="navbar-item has-text-centered">
-      <h1 class="title is-">OnlyGigs</h1>
+      <h1 class="title is-1">OnlyGigs</h1>
     </div>
         </nav>
 
@@ -37,5 +38,7 @@
       <p>logged in</p>
       <script src="/js/logout.js"></script>
     {{/if}}
+
   </body>
+
 </html>

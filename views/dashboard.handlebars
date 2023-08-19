@@ -3,59 +3,72 @@
 
 <div class="">
   <div class="">
-    <h2>Hello {{username}}, welcome to your dashboard.</h2>
+    <h2 class="has-text-centered is-size-3 has-text-warning-light mt-6">Hello, {{username}}, welcome to your dashboard.</h2>
   </div>
 </div>
 
 <div class="">
-  <div class="">
-    <h3>Post a new gig:</h3>
+    <h3 class="is-size-3 has-text-warning-light has-text-centered mt-5 has-text-weight-semibold">Post a New <span class="has-text-danger is-size-3">Gig</span>:</h3>
+  <div class="form login-form field is-grouped is-grouped-centered">
+  
 
-    <form class="form" id="new-post-form">
+    <form class="form box has-background-warning-light" id="new-post-form">
       <div class="form-group">
-        <label for="location">Location:</label>
+        <label for="location" class="label is-size-5 has-text-danger">Location:</label>
         <input
-          class="form-input"
+          class="form-input input "
           type="text"
           id="gig-location"
           name="location"
+          placeholder="Serums"
         />
       </div>
       <div class="form-group">
-        <label for="date">Date:</label>
+        <label for="date" class="label is-size-5 has-text-danger">Date:</label>
         <input
           size="30"
-          class="form-input"
+          class="form-input input"
           type="text"
           id="gig-date"
           name="date"
           autocomplete="off"
+         placeholder="MM/DD/YYYY"
+
         />
       </div>
       <div class="form-group">
-        <label for="time">Time:</label>
-        <input class="form-input" type="text" id="gig-time" name="time" />
+        <label for="time" class="label is-size-5 has-text-danger">Time:</label>
+        <input class="form-input input" type="text" id="gig-time" name="time"          placeholder="6:30"
+ />
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create Gig</button>
+      <div class="form-group has-text-centered">
+        <button type="submit" class="button is-danger is-focused has-text-warning-light mt-2">Create Gig</button>
       </div>
     </form>
   </div>
 
   <div class="col-md-6" id="post-list">
-    <h3>{{username}}'s Gigs:</h3>
+    <h3 class="is-size-3 has-text-warning-light has-text-centered mt-5 has-text-weight-semibold is-underlined">{{username}}'s <span class="has-text-danger is-size-3 ">Gigs:</span></h3>
     {{#each gigs as |gig|}}
       <div class="row mb-2 my-post">
-        <div class="col-md-8">
-          <h4>
-            <p>Location: {{location}}</p>
-            <p>Date: {{date}}</p>
-            <p>Time: {{time}}</p>
+        <div class="col-md-8 is-size-3 has-text-warning-light has-text-centered mt-5 has-text-weight-semibold is-grouped is-grouped-centered">
+ <div >
+            <div class="column">
+            <p class="label is-size-4 has-text-danger">Location: <span class="has-text-warning-light ">{{location}}</span></p>
+            </div>
+            <div class="column">
+            <p class="label is-size-4 has-text-danger">Date: <span class="has-text-warning-light ">{{date}}</span></p>
+            </div>
+                        <div class="column">
+
+            <p class="label is-size-4 has-text-danger">Time: <span class="has-text-warning-light ">{{time}}</span></p>
+                        </div>
+
           </h4>
         </div>
         {{#if ../check_user.is_band}}
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{gig.id}}">DELETE POST</button>
+        <div class="col-md-4 has-text-centered">
+          <button class="btn btn-sm btn-danger button button is-danger is-focused has-text-warning-light mt-2" data-id="{{gig.id}}">DELETE POST</button>
         </div>
         {{/if}}
       </div>
