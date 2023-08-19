@@ -1,0 +1,56 @@
+/* Import the Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
+.title {
+  font-family: 'Kalam', sans-serif;
+  font-weight: 700; /* Bold weight */
+color: 003049;
+}
+
+.navbar {
+    background-color: FDF0D5;
+}
+
+.navbar-item {
+    color: 003049;
+}
+
+
+.body {
+    background-color: 003049;
+}
+
+h3.has-text-warning-light span {
+    /* Your CSS styles here */
+    /* For example: */
+    font-family: kalam;
+    
+  }
+
+  div h3 span {
+    font-family: kalam;
+  }
+
+  div h2 span {
+    font-family: kalam;
+
+  }
+
+  div p span {
+font-weight: 400;
+  }
+
+  div > span {
+    font-weight: 400;
+      }
+
+  div .col-md-8 h4 {
+    background-color: FDF0D5;
+
+  }
+
+ .span {
+    font-weight: 400;
+
+  }

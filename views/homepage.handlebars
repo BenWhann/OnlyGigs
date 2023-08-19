@@ -1,19 +1,19 @@
 {{log gigs}}
 {{log check_user}}
 
-  <div class="columns is-centered is-flex-direction-column">
+  <div class="columns is-centered is-flex-direction-column ">
     {{!-- <div class="column is-half"> --}}
         {{#each gigs as |gig| }}
-        <div class="container mt-3 notification is-primary has-text-centered has-background-danger-dark">
+        <div class="container column is-half mb-2 mt-6 notification is-primary has-text-centered has-background-danger">
                       
           <h2>
-              <a href="/dashboard/{{gig.user_id}}">{{gig.user.username}}</a>
+              <a class="is-size-3 has-text-warning-light has-text-weight-bold" href="/dashboard/{{gig.user_id}}">{{gig.user.username}}</a>
             </h2>
-            <p>
-              Location: {{gig.location}}
+            <p class=" label is-size-4 has-text-warning-light">
+              Location: <span class="has-text-warning-light">{{gig.location}}</span>
             </p>
-            <p>Date: {{gig.date}}</p>
-            <p>Time: {{gig.time}}</p>
+            <p class="label is-size-4 has-text-warning-light">Date: <span class="has-text-warning-light">{{gig.date}}</p></span>
+            <p class="label is-size-4 has-text-warning-light">Time: <span class="has-text-warning-light">{{gig.time}}</p></span>
         </div>
     {{!-- </div> --}}
               {{/each}}
