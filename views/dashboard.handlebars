@@ -68,7 +68,10 @@
         </div>
         {{#if ../check_user.is_band}}
         <div class="col-md-4 has-text-centered">
-          <button class="btn btn-sm btn-danger button button is-danger is-focused has-text-warning-light mt-2" data-id="{{gig.id}}">DELETE POST</button>
+          <button id="updGig" class="btn btn-sm btn-danger button button is-danger is-focused has-text-warning-light mt-2" data-id="{{gig.id}}">UPDATE GIG</button>
+        </div>
+        <div class="col-md-4 has-text-centered">
+          <button class="btn btn-sm btn-danger button button is-danger is-focused has-text-warning-light mt-2" data-id="{{gig.id}}">DELETE GIG</button>
         </div>
         {{/if}}
       </div>
