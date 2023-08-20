@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { User, Gig } = require("../models");
+const { User, Gig, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    if (req.session.logged_in){
+    if (req.session.logged_in) {
       const is_band = await User.findByPk(req.session.user_id, {
         attributes: ["is_band"],
       });
@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     });
     // Serialize data so the template can read it
     const gigs = gigData.map((gig) => gig.get({ plain: true }));
-    
+
     // Pass serialized data and session flag into template
     res.render("homepage", {
       check_user,
@@ -69,13 +69,19 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
 router.get("/dashboard/:id", withAuth, async (req, res) => {
   try {
-    if (req.session.logged_in){
+    if (req.session.logged_in) {
       const is_band = await User.findByPk(req.session.user_id, {
         attributes: ["is_band"],
       });
 
       const band_desc = await User.findByPk(req.params.id, {
-        attributes: ["description"]
+        attributes: ["description"],
+        include: [
+          {
+            model: Comment,
+            include: [{ model: User, attributes: ["username"] }],
+          },
+        ],
       });
 
       var check_user = is_band.get({ plain: true });

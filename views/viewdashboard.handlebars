@@ -1,31 +1,45 @@
-{{log description}}
+{{log description.comments}}
 
-<div class="col-md-6" id="post-list">
-  <div>
-    <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">A bit about
-      <span class="has-text-danger is-size-3">{{username}}</span>
-    </h2>
-    <p class="has-text-centered is-size-4 has-text-warning-light">{{description.description}}</p>
-  </div>
-  <h3 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">{{username}}'s <span
-      class="has-text-danger is-size-3">Gigs:</span></h3>
-  {{#each gigs as |gig|}}
-  <div class="row mb-2 my-post mb-5 mt-5 has-text-centered">
-    <div class="col-md-8">
-      <h4 class="box container column is-half has-background-danger">
-        <p class="label is-size-4 has-text-warning-light">Location:
-          <span>{{location}}</span>
-        </p>
-        <p class="label is-size-4 has-text-warning-light">Date:
-          <span class="has-text-warning-light">{{date}}</span>
-        </p>
-        <p class="label is-size-4 has-text-warning-light">Time:
-          <span class="has-text-warning-light">{{time}}</span>
-        </p>
-      </h4>
-    </div>
-  </div>
-  {{/each}}
+<div>
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">A bit about
+    <span class="has-text-danger is-size-3">{{username}}</span>
+  </h2>
+  <p class="has-text-centered is-size-4 has-text-warning-light">{{description.description}}</p>
 </div>
+<h3 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">{{username}}'s <span
+    class="has-text-danger is-size-3">Gigs:</span></h3>
+{{#each gigs as |gig|}}
+<div class="row mb-2 my-post mb-5 mt-5 has-text-centered">
+  <div class="col-md-8">
+    <h4 class="box container column is-half has-background-danger">
+      <p class="label is-size-4 has-text-warning-light">Location:
+        <span>{{location}}</span>
+      </p>
+      <p class="label is-size-4 has-text-warning-light">Date:
+        <span class="has-text-warning-light">{{date}}</span>
+      </p>
+      <p class="label is-size-4 has-text-warning-light">Time:
+        <span class="has-text-warning-light">{{time}}</span>
+      </p>
+    </h4>
+  </div>
+</div>
+{{/each}}
+<div>
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">Comments for this band
+  </h2>
+  {{#each description.comments as |comment|}}
+  <p class="has-text-warning-light has-text-centered">{{comment.body}} ------- {{format_date comment.date_created}}</p>
+  {{/each}}
+
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">Post a comment</h2>
+  <div>
+    <textarea class="textarea has-text-centered mt-2" placeholder="Your Comment Goes Here!" name="" id="body-comment"></textarea>
+  </div>
+  <div class="has-text-centered">
+    <a data-id="{{id}}" class="button is-danger is-focused has-text-warning-light mt-2" id="submit-button" href="#">Submit comment</a>
+  </div>
+</div>
+
 
 <script src="../../js/viewDashboard.js"></script>
