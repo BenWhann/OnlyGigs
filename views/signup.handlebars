@@ -1,36 +1,39 @@
-<div class="row has-text-centered">
-   <h2 class="has-text-centered ">Signup</h2>
-  <div class="col-md-6 form login-form field is-grouped is-grouped-centered">
+<div class="row pt-5 mt-4">
+   <h2 class="has-text-centered is-size-2 has-text-warning-light mt-6 has-text-weight-bold mgt-large">SIGNUP</h2>
+  <div class="columns form login-form field is-grouped is-grouped-centered">
    
 
-    <form class="form signup-form">
+    <form class="column is-3 form signup-form mt-4 box has-background-warning-light">
+
       <div>
-        <label for="username">Username:</label>
-        <input class="form-input input" type="text" id="username">
+        <label for="username" class="label is-size-3 has-text-danger ">Username:</label>
+        <input class="form-input input is-danger is-medium" type="text" id="username" placeholder="The Rolling Scones">
       </div>
+
+
       <div>
-        <label for="band-description">Band Description optional:</label>
-        <input class="form-input input" type="text" id="band-desc">
+        <label for="band-description" class="label is-size-3 has-text-danger ">Band Description (Optional):</label>
+        <input class="form-input input is-danger is-medium" type="text" id="band-desc" placeholder="Super cool band.">
       </div>
       <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input input" type="text" id="email-signup" />
+        <label for="email-signup" class="label is-size-3 has-text-danger ">Email:</label>
+        <input class="form-input input is-danger is-medium" type="text" id="email-signup" placeholder="name@gmail.com" />
       </div>
       <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input input" type="password" id="password-signup" />
+        <label for="password-signup" class="label is-size-3 has-text-danger ">Password:</label>
+        <input class="form-input input is-danger is-medium" type="password" id="password-signup" placeholder="********" />
       </div>
       <div  "form-group control">
-        <label class="radio"  for="is-band">is band?</label>
+        <label class="radio is-size-5"  for="is-band">Are you a band?</label>
         <input class="form-input radio" checked="true" type="checkbox"  name="answer" id="is-band"/>
 
       </div>
-      <div class="form-group">
-        <button class="button has-background-danger-dark has-text-white mt-2" type="submit">signup</button>
+      <div class="form-group has-text-centered">
+        <button class="button button is-danger is-focused has-text-warning-light mt-2" type="submit">signup</button>
       </div>
     </form>
   </div>
-  <div class="col-md-6">
-    <a href="/login">login instead</a>
+  <div class="col-md-6 has-text-centered">
+    <a href="/login" class="is-size-5 has-text-warning-light is-underlined" href="/signup">login instead</a>
   </div>
     <script src="./js/signup.js"></script>

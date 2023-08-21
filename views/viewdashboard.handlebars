@@ -1,13 +1,13 @@
 {{log description.comments}}
 
 <div>
-  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">A bit about
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold is-underlined">A bit about
     <span class="has-text-danger is-size-3">{{username}}</span>
   </h2>
   <p class="has-text-centered is-size-4 has-text-warning-light">{{description.description}}</p>
 </div>
-<h3 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">{{username}}'s <span
-    class="has-text-danger is-size-3">Gigs:</span></h3>
+<h3 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold is-underlined">{{username}}'s <span
+    class="has-text-danger is-size-3 ">Gigs:</span></h3>
 {{#each gigs as |gig|}}
 <div class="row mb-2 my-post mb-5 mt-5 has-text-centered">
   <div class="col-md-8">
@@ -26,18 +26,32 @@
 </div>
 {{/each}}
 <div>
-  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">Comments for this band
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold is-underlined">Comments for This Band
   </h2>
+
   {{#each description.comments as |comment|}}
-  <p class="has-text-warning-light has-text-centered">{{comment.body}} ------- {{format_date comment.date_created}}</p>
+  <p class="has-text-warning-light has-text-centered is-size-5">{{comment.body}} ------- {{format_date comment.date_created}}</p>
   {{/each}}
 
-  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">Post a comment</h2>
-  <div>
-    <textarea class="textarea has-text-centered mt-2" placeholder="Your Comment Goes Here!" name="" id="body-comment"></textarea>
+  <h2 class="is-size-3 has-text-warning-light has-text-centered mt-6 has-text-weight-semibold">Post a Comment:</h2>
+
+  <div class="columns is-centered">
+    <div class="column is-6 has-text-centered">
+      <div class="field has-addons-centered">
+        <div class="control">
+          <textarea class="textarea has-text-centered mt-2 is-danger is-large" placeholder="Your Comment Goes Here!" name=""
+            id="body-comment"></textarea>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+
   <div class="has-text-centered">
-    <a data-id="{{id}}" class="button is-danger is-focused has-text-warning-light mt-2" id="submit-button" href="#">Submit comment</a>
+    <a data-id="{{id}}" class="button is-danger is-focused has-text-warning-light mt-2" id="submit-button"
+      href="#">Submit Comment</a>
   </div>
 </div>
 
