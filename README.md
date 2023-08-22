@@ -25,6 +25,12 @@ npm i
 - Set up environment variables in a .env file
 - Configure the mySQL database by running SOURCE schema.sql in the db folder
 - Start the server by running node server.js
+  <br>
+  <br>
+  [Live Link](https://sheltered-inlet-74192-222de79efe22.herokuapp.com/)
+  <br>
+
+  [Repo](https://github.com/BenWhann/OnlyGigs)
 
 ![OnlyGigs](assets/images/onlygigs.png)
 
