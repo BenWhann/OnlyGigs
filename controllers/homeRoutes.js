@@ -83,7 +83,7 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
           },
         ],
       });
-
+      
       var check_user = is_band.get({ plain: true });
       var description = band_desc.get({ plain: true });
     }

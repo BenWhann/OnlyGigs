@@ -7,7 +7,7 @@ router.post("/signup", async (req, res) => {
     console.log("worked");
     console.log(req.body);
     const userData = await User.create(req.body);
-
+    
     res.status(200).json(userData);
   } catch (err) {
     console.error(err);
