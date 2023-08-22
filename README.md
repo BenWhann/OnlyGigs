@@ -6,6 +6,9 @@
 
 OnlyGigs is a full-stack web application designed to streamline the process of local bands and musicians sharing their upcoming live performances with their fans and audiences. With a user-friendly interface and features, OnlyGigs aims to enhance the concert-going experience by providing a centralized platform for bands to post their gig details and for fans to easily discover and stay updated on upcoming shows.
 
+## Link to live server
+https://sheltered-inlet-74192-222de79efe22.herokuapp.com/
+
 ## Table of Contents
 
 - [Installation](#installation)
