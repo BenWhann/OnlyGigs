@@ -26,6 +26,8 @@ npm i
 - Configure the mySQL database by running SOURCE schema.sql in the db folder
 - Start the server by running node server.js
 
+![OnlyGigs](assets/images/onlygigs.png)
+
 ## Credits
 
 [Brady Lange](https://github.com/BradyLange1)
@@ -43,8 +45,6 @@ This application is covered by the MIT license.
 ## Features
 
 - Seperate user and band sign up & login
-- User & band dashboards
-- Gig date, time, & location
-- 
--
--
+- Different user and band interfaces
+- Add a new gig
+- Add comments to band page
