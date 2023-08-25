@@ -41,16 +41,16 @@ const delButtonHandler = async (event) => {
 const updButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
-
-    const response = await fetch(`/api/gig/${id}`, {
-      method: "UPDATE",
-    });
-
-    if (response.ok) {
-      document.location.replace("/dashboard");
-    } else {
-      alert("Failed to delete post");
-    }
+    console.log(id);
+    // const response = await fetch(`/api/gig/${id}`, {
+    //   method: "UPDATE",
+    // });
+    document.location.href=`/updategig/${id}`;
+    // if (response.ok) {
+      
+    // } else {
+    //   alert("Failed to delete post");
+    // }
   }
 };
 
@@ -59,9 +59,7 @@ document
   .addEventListener("submit", newFormHandler);
 
 document
-  .querySelector("#post-list")
+  .querySelector("#delete")
   .addEventListener("click", delButtonHandler);
-
-  document
-  .querySelector("#updGig")
-  .addEventListener("click", updButtonHandler);
+console.log(document.querySelector('#gigs'));
+document.querySelector("#gigs").addEventListener("click", updButtonHandler);
