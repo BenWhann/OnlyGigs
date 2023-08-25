@@ -1,0 +1,47 @@
+<div class="">
+    <h3 class="is-size-3 has-text-warning-light has-text-centered mt-5 has-text-weight-semibold">Edit a <span class="has-text-danger is-size-3">Gig</span>:</h3>
+  <div class="form login-form field is-grouped is-grouped-centered">
+  
+
+    <form class="form box has-background-warning-light" id="update-gig-form">
+      <div class="form-group">
+        <label for="location" class="label is-size-5 has-text-danger">Location:</label>
+        <input
+          class="form-input input "
+          type="text"
+          id="gig-location"
+          name="location"
+          placeholder="Serums"
+          value="{{gig.location}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="date" class="label is-size-5 has-text-danger">Date:</label>
+        <input
+          size="30"
+          class="form-input input"
+          type="text"
+          id="gig-date"
+          name="date"
+          autocomplete="off"
+         placeholder="MM/DD/YYYY"
+         value="{{gig.date}}"
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="time" class="label is-size-5 has-text-danger">Time:</label>
+        <input value="{{gig.time}}" class="form-input input" type="text" id="gig-time" name="time"          placeholder="6:30"
+ />
+      </div>
+      <div class="form-group">
+        <input value="{{gig.id}}" class="form-input input" type="hidden" id="gig-id" name="id" />
+      </div>
+      <div class="form-group has-text-centered">
+        <button type="submit" id="edit" class="button is-danger is-focused has-text-warning-light mt-2">Update Gig</button>
+      </div>
+    </form>
+  </div>
+
+  {{!-- <script src="../../js/dashboard.js"></script> --}}
+  <script src="../../js/editgig.js"></script>

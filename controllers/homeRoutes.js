@@ -103,4 +103,21 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
   }
 });
 
+router.get("/updategig/:id", (req, res) => {
+  Gig.findOne({
+    where:{
+      id: req.params.id,
+    },
+    raw: true
+  }).then(gig => {
+    console.log(gig);
+    // const gig = gigData.get({ plain: true });
+    res.render("editgig", {gig});
+  }).catch((err) => {
+    console.log(err);
+    res.status(400).json(err);
+  });
+  
+});
+
 module.exports = router;
